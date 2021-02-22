@@ -1,0 +1,149 @@
+.header-announcement-bar{
+    background: $announcementBgColor;
+    color: $announcementTextColor;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 0;
+    .announcement-text{
+        color: $announcementTextColor;
+
+        span{
+            color: $announcementTextColorEmphasis;
+        }
+    }
+}
+
+.header-banner{
+    background: $primaryColor;
+    color: $primaryTextColor;
+    font-family: 'Montserrat';
+    font-size: 14px;
+
+    .header-banner-left{
+
+        .navbar-toggler{
+            display: none;
+            color: white;
+            cursor: pointer;
+        }
+        .header-banner-socials{
+            .header-banner-social__item{
+                margin-right: 10px;
+                cursor: pointer;
+                .header-banner-social__item-count{
+                    font-size: 12px;
+                }
+                &:hover{
+                    color: $primaryTextHoverColor;
+                }
+            }
+        }
+
+        .header-banner-search{
+            padding-left: 30px;
+            .search-btn{
+                padding: 0;
+                color: white;
+            }
+            .search-input{
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid white;
+                border-radius: 0;
+                font-family: "Montserrat";
+                &::placeholder{
+                    color: $placeholderText;
+                    font-size: 12px;
+                }
+                &:focus{
+                    outline:white;
+                }
+            }
+        }
+    }
+
+    .header-banner-logo{
+        text-align: center;
+
+        .navbar-brand{
+            font-family: 'Bebas Neue', cursive;
+            font-size: 40px;
+            color: $primaryTextColor !important;
+            &:hover{
+                color: $primaryTextColor !important;
+            }
+        }
+    }
+
+    .header-banner-right{
+        font-size: 20px;
+
+        .header-banner-right__item{
+            margin-left: 15px;
+            cursor: pointer;
+
+            .banner-count{
+                font-family: 'Montserrat';
+                font-size: 12px;
+            }
+            &:hover{
+                color: $primaryTextHoverColor;
+            }
+        }
+    }
+}
+
+.header-nav{
+    background: $primaryColor;
+    color: $primaryTextColor;
+    .menu{
+        width: 100%;
+        margin-bottom: 0px;
+
+        .menu-link{
+            color: $primaryTextColor;
+            font-family: 'Montserrat';
+            font-size: 14px;
+            text-transform: uppercase;
+            &:hover{
+                color: $primaryTextHoverColor;
+            }
+        }
+    }
+}
+
+
+/**** MEDIA QUERIES ****/
+
+// laptops
+@media all and (max-width: 1200px){
+    .header-banner{
+        .header-banner-social__item-count{
+            display: none;
+        }
+        .header-banner-search{
+            .search-input{
+                width: 90%;
+            }
+        }
+    }   
+}
+
+// large tablets
+@media all and (max-width: 992px){
+    .header-banner{
+        .header-banner-left{
+            .navbar-toggler{
+                display: inline-block;
+            }
+            .header-banner-social__item{
+                display: none;
+            }
+            .header-banner-search{
+                // display: none;
+            }
+        }
+      
+    }   
+}
